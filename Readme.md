@@ -28,6 +28,12 @@ Return the class of an object <br>
 &emsp;`class(objectName)` <br>
 Return the length of an object <br>
 &emsp;`length(objectName)` <br>
+Return `TRUE` if two objects are identical; `FALSE` otherwise <br>
+&emsp;`identical (object1, object2)` <br>
+Creare a vector or sequence or array with 3 entries (replace entries with values or variables; extendible to less or more number of entries)<br>
+&emsp;`seq = c(entry1, entry2, entry3)` <br>
+Return a table with frequency of each entry in a vector <br>
+&emsp;`table(seq)`
 
 ## Dataset tools
 Display all datasets available <br>
@@ -42,5 +48,7 @@ View the first 6 entries of a data-frame <br>
 &emsp;`head(DatasetName)` <br>
 View the last 6 entries of a data-frame <br>
 &emsp;`tail(DatasetName)` <br>
-Access a column from a data-frame <br>
-&emsp;`DatasetName$column_name`
+Access a column from a data-frame (1) <br>
+&emsp;`DatasetName$column_name` <br>
+Access a column from a data-frame (2) <br>
+&emsp;`DatasetName[["column_name"]]` <br>
