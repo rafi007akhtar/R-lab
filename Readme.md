@@ -25,3 +25,8 @@ Download a package <br>
 Load a package into your script <br>
 &emsp;`library (package_name)` <br>
 
+## Dataset tools
+Display all datasets available <br>
+&emsp;`data()` <br>
+Load a dataset <br>
+&emsp;`data(DatasetName)` <br>
