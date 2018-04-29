@@ -13,3 +13,6 @@ str(murders)
 
 # Show the first 6 entries of this dataset
 head(murders)
+
+regions = murders$region 
+class(regions) # factor -- used to store categorical data
