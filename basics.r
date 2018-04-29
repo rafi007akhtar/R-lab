@@ -18,3 +18,13 @@ print("---------") # endling line
 n <- 100 # NOTE: alternative assignment operator (<-)
 sum = n*(n+1)/2
 paste("Sum of first", n, "natural numbers:", sum)
+
+print("---------") # endling line
+
+
+# THREE: Class (datatypes) of objects (variables)
+class(n) # returns the class of object n ("numeric" in this case)
+class("this is a string")
+class(5 == 3) # logicals
+
+print("---------") # endling line
