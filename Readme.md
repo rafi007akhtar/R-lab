@@ -7,6 +7,10 @@ Run R-script from the console <br>
 &emsp;`Rscript filename.r` <br>
 Open R shell in the console <br> 
 &emsp;`R` <br>
+Open help for a function (1) <br>
+&emsp;`help(functionName)` <br>
+Open help for a function (2) <br>
+&emsp;`?functionName` <br>
 Show all the objects present in the workspace <br>
 &emsp;`ls()` <br>
 Input a string from user <br>
