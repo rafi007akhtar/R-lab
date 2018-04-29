@@ -10,14 +10,14 @@ Open R shell in the console <br>
 Show all the objects present in the workspace <br>
 &emsp;`ls()` <br>
 Input a string from user <br>
-&emsp; `inp = readline(promt = "optional prompt text")` <br>
+&emsp;`inp = readline(promt = "optional prompt text")` <br>
 Cast into integer <br>
-&emsp; `num = as.integer(inp)`
+&emsp;`num = as.integer(inp)`
 
 
 ## R-basics
 Download a package <br>
 &emsp;`install.packages ("package_name")` <br>
 Load a package into your script <br>
-&emsp; `library (package_name)` <br>
+&emsp;`library (package_name)` <br>
 
