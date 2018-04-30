@@ -47,3 +47,49 @@ class(seq)
 print("---------") # endling line
 
 
+# FIVE: Work with sequences (2)
+s1 = seq(1,10) # creates a sequence 1,2,3,...,10
+s2 = 1:10 # does the same as above
+s3 = c(1,2,3,4,5,6,7,8,9,10) # same as the above two
+s1
+s2
+s3
+paste("s1 == s2:", identical(s1,s2)) # TRUE as both are numeric sequences
+paste("s2 == s3:", identical(s3,s2)) # FALSE as s3 is possible to contain character in it
+paste("s3 == s1:", identical(s1,s3)) # FALSE, same reason
+
+s1 = seq(1,20,2) # sequence from 1 no more than 20 incrementing by 2 each time
+s1
+
+s2 = seq(0, 100, length.out = 5) # length of s2 should be 5 and it should evenly occupy elements 1 through 100, that is, elements should be incremented by the same amount
+s2 # (1, 25, 50, 75, 100)
+
+print("---------") # endling line
+
+
+# SIX: Working with sequences (3)
+alter_egos = c("Batman", "Superman", "Wonder Woman")
+personas = c("Bruce Wayne", "Clark Kent", "Diana Prince")
+# assign persona names to alter egos, thus creating a table with personas as columns and alter_egos as values
+names(alter_egos) <- personas
+alter_egos
+
+# another way to do this is by assigning names=values while sequence creation itself
+alter_egos_new = c("Steve Rogers" = "Captain America", "Tony Stark" = "Ironman", Wanda = "Scarlet Witch", Vision = "Vision")
+alter_egos_new
+
+# access elements from the vector
+paste("Second element:", alter_egos_new[2]) # Ironman (access one element)
+paste("Elements one and three:", alter_egos_new[c(1,3)]) # Captain America, Scarlet Witch (grab two elements using multi-element vector)
+print("Elements 2 through 4:")
+alter_egos_new[2:4] # use sequence of nums to access the elements
+print("Elements 1 through 3")
+alter_egos_new[seq(1,3)]
+paste("Bruce Wayne:", alter_egos["Bruce Wayne"]) # finally, access using names
+
+print("---------") # endling line
+
+
+
+
+
