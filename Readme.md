@@ -20,6 +20,7 @@ Cast into integer <br>
 
 
 ## R-basics
+### Objects, Vectors and Classes
 Download a package <br>
 &emsp;`install.packages ("package_name")` <br>
 Load a package into your script <br>
@@ -43,6 +44,56 @@ Access elements of a vector <br>
 &emsp; `vec["name"] # access value of a table with name specified` <br>
 Return a table with frequency of each entry in a vector <br>
 &emsp;`table(seq)`
+
+### Sort, Order, and Rank
+Return sorted vector <br>
+&emsp;`sort(vector_name)` <br>
+Return the vector containing indices required to sort the vector <br>
+&emsp;`order(vector_name)` <br>
+Return the indices of vector items where they appear in the sorted list <br>
+&emsp;`rank(vector_name)` <br>
+To illustrate these concepts, consider the following example.
+<table>
+    <thead>
+        <th>items</th>
+        <th>sort(items)</th>
+        <th>order(items)</th>
+        <th>rank(items)</th>
+    </thead>
+    <tr>
+        <td>31</td>
+        <td>4</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>15</td>
+        <td>3</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>31</td>
+        <td>1</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>92</td>
+        <td>65</td>
+        <td>5</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>65</td>
+        <td>92</td>
+        <td>4</td>
+        <td>4</td>
+    </tr>
+</table>
+
+**Note.** Indexing in R begins from 1.
+
 
 ## Dataset tools
 Display all datasets available <br>
