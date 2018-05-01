@@ -1,3 +1,7 @@
+# ZERO: Import dependencies
+library(dslabs)
+data(na_example)
+
 # ONE: Print a quadratic eqn., and show its solutions
 a = 3
 b = 5
@@ -67,7 +71,7 @@ s2 # (1, 25, 50, 75, 100)
 print("---------") # endling line
 
 
-# SIX: Working with sequences (3)
+# SIX: Work with sequences (3)
 alter_egos = c("Batman", "Superman", "Wonder Woman")
 personas = c("Bruce Wayne", "Clark Kent", "Diana Prince")
 # assign persona names to alter egos, thus creating a table with personas as columns and alter_egos as values
@@ -90,6 +94,16 @@ paste("Bruce Wayne:", alter_egos["Bruce Wayne"]) # finally, access using names
 print("---------") # endling line
 
 
+# SEVEN: Remove NA's from a dataset
+print("First 50 entries before NA-cleaning")
+print(na_example[1:50])
 
+# now perform the cleaning
+na_index = is.na(na_example) # returns TRUE if NA present; FALSE otherwise
+na_example_cleaned = na_example[!na_index] # values without NA's
+print("First 50 entries after NA-cleaning")
+print(na_example_cleaned[1:50]) # return the first 6 entries of those values that are not NA
+
+print("---------") # endling line
 
 
