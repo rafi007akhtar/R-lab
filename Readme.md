@@ -43,7 +43,12 @@ Access elements of a vector <br>
 &emsp; `vec[c(n,m)] # access elements number n and m; extensible to more number of elements; can be accessed using other multi-vector indices mentioned above` <br>
 &emsp; `vec["name"] # access value of a table with name specified` <br>
 Return a table with frequency of each entry in a vector <br>
-&emsp;`table(seq)`
+&emsp;`table(seq)` <br>
+Return the index of the lexical minimum of a vector <br>
+&emsp;`which.min(vector_name)` <br>
+Return the index of lexical maximum of a vector <br>
+&emsp;`which.max(vector_name)` <br>
+
 
 ### Sort, Order, and Rank
 Return sorted vector <br>
@@ -112,3 +117,7 @@ Access a column from a data-frame (1) <br>
 &emsp;`DatasetName$column_name` <br>
 Access a column from a data-frame (2) <br>
 &emsp;`DatasetName[["column_name"]]` <br>
+Return a new data-frame (table) with columns `col1`, `col2`, `col3` (extendible to more or less columns) <br>
+&emsp; `data.frame (col_name_1=col1, col_name_2=col2, col_name_3=col3)` <br>
+Retrieve indices from a dataset containing NA's; returns a list with TRUE for positions having an NA and false otherwise <br>
+&emsp;`is.na(dataset_name)`
