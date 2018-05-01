@@ -5,7 +5,6 @@ library(dslabs)
 data(murders)
 
 # murders # display the entire dataset in table-form
-
 paste("The murders dataset is of the class", class(murders), "with the following structure.")
 
 # Display its strucutre
@@ -31,4 +30,7 @@ states = murders$state[orders] # access the state column in murders, and index t
 print("States from lowest murder rate till highest")
 print(states)
 
-
+# Create a sub-table (data-frame) from the murders table with state names and their total murders in ascending order
+sub_murders = data.frame(state_name = states, total_murders = totals[orders])
+head(sub_murders) # display the first 6 entries
+tail(sub_murders) # display the last 6 entries
