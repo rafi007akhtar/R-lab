@@ -107,3 +107,21 @@ print(na_example_cleaned[1:50]) # return the first 6 entries of those values tha
 print("---------") # endling line
 
 
+# EIGHT: Logicals
+# they perform on number as well as vectors
+num1 = 12
+num2 = 0
+num3 = 15
+vec = c(1, 2, 3)
+print("Some logical operations on numbers")
+paste(num1, "&", num2, "=", num1&num2)
+paste(num2, "|", num3, "=", num3|num2)
+paste("!", num2, "=", !num2)
+print("Some logical operations on vectors")
+res = c("1 2 3 < 2 = ", vec < 2) # a logical operation on vector gets applied to all items of the vector
+print(res)
+
+vec = c(TRUE, FALSE, FALSE, TRUE, FALSE, FALSE)
+c(which(vec), "of vec are true") # return the indices in vec where it is TRUE (1,4)
+# other logical operations: <=, >, >=, ==, !=
+

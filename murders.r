@@ -26,7 +26,7 @@ sort(totals)
 
 # Display the state names according to their total murders in ascending order
 orders = order(totals) # returns the multivalued index vector required to sort the integers
-states = murders$state[orders] # access the state column in murders, and index them as per their total murders order
+states = murders$state[orders] # access the state column in murders, and index them as per their total murders order. Also: VECTORS CAN BE INDEXED WITH LOGICALS!
 print("States from lowest murder rate till highest")
 print(states)
 
@@ -34,3 +34,29 @@ print(states)
 sub_murders = data.frame(state_name = states, total_murders = totals[orders])
 head(sub_murders) # display the first 6 entries
 tail(sub_murders) # display the last 6 entries
+
+# ANALYSIS BEGINS HERE
+# MURDER RATE: Number of murders per capita, that is per 100000 people of population
+pops = murders$population
+murder_rate = (totals / pops) * 100000
+print("State names are per their murder rates in descending order")
+states = murders$state
+states[order(murder_rate, decreasing=TRUE)] # print the state names in the order of their murder rates in decreasing order
+
+# Print those states whose murder rates are less than 1
+test_cond = murder_rate < 1
+print("States with low murder rates")
+states [test_cond]
+
+# Find the indices of Nevada, Maine and Kansas using match(...), and then find their murder rates
+reqd_states = c("Nevada", "Maine", "Kansas")
+ind = match(reqd_states, states) # returns the indices of the first parameter present in the second parameter
+data.frame(state = reqd_states, "murder rate" = murder_rate[ind])
+
+# Check if Vermont, California and Dakota are present in the state attributes, using %in%
+reqd_states = c("Vermont", "California", "Dakota")
+ind = reqd_states %in% states
+paste("Present for", reqd_states[ind])
+paste("Absent for", reqd_states[!ind])
+
+

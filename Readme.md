@@ -48,6 +48,20 @@ Return the index of the lexical minimum of a vector <br>
 &emsp;`which.min(vector_name)` <br>
 Return the index of lexical maximum of a vector <br>
 &emsp;`which.max(vector_name)` <br>
+Arithmetic operations with two vectors (extendible to more than two) <br>
+&emsp;`vector1 + vector2 # adds element-wise and returns the sum vector` <br>
+&emsp;`vector1 - vector2 # subtracts element-wise and returns the difference vector` <br>
+&emsp;`vector1 * vector2 # adds element-wise and returns the sum vector` <br>
+&emsp;`vector1 / vector2 # divides vectors element-wise and returns it` <br>
+&emsp;`vector1 %% vector2 # divides vectors element-wise and computes the remainder; returns it` <br>
+&emsp;`vector1 ^ n # returns vector1 with all its elements raised to power n` <br>
+Logical operations on numbers and vectors <br>
+&emsp;`num1 & num2 # TRUE if both != 0; FALSE otherwise` <br>
+&emsp;`num1 | num2 # TRUE if any one != 0; FALSE otherwise` <br>
+&emsp;`num1 == num2 # TRUE if num1 = num2; FALSE otherwise` <br>
+&emsp;`vector1 < n # returns a vector with value TRUE for those elements of vector1 < n and FLASE everywhere else` <br>
+Other logical operations: `<=, >, >=, !=, !` <br>
+
 
 
 ### Sort, Order, and Rank
@@ -55,8 +69,10 @@ Return sorted vector <br>
 &emsp;`sort(vector_name)` <br>
 Return the vector containing indices required to sort the vector <br>
 &emsp;`order(vector_name)` <br>
+Return the vector containing indices required to sort the vector, in descending order <br>
+&emsp;`order(vector_name, decreasing=TRUE)` <br>
 Return the indices of vector items where they appear in the sorted list <br>
-&emsp;`rank(vector_name)` <br>
+&emsp;`rank(vector_name)` <br> <br>
 To illustrate these concepts, consider the following example.
 <table>
     <thead>
@@ -64,40 +80,56 @@ To illustrate these concepts, consider the following example.
         <th>sort(items)</th>
         <th>order(items)</th>
         <th>rank(items)</th>
+        <th>order(items, decreasing=TRUE)</th>
     </thead>
     <tr>
         <td>31</td>
         <td>4</td>
         <td>2</td>
         <td>3</td>
+        <td>4</td>
     </tr>
     <tr>
         <td>4</td>
         <td>15</td>
         <td>3</td>
         <td>1</td>
+        <td>5</td>
     </tr>
     <tr>
         <td>15</td>
         <td>31</td>
         <td>1</td>
         <td>2</td>
+        <td>1</td>
     </tr>
     <tr>
         <td>92</td>
         <td>65</td>
         <td>5</td>
         <td>5</td>
+        <td>3</td>
     </tr>
     <tr>
         <td>65</td>
         <td>92</td>
         <td>4</td>
         <td>4</td>
+        <td>2</td>
     </tr>
 </table>
 
 **Note.** Indexing in R begins from 1.
+
+
+## Data Wrangling tools
+Return indices of elements of first vector present in the second vector <br>
+&emsp;`match(c("a", "i", "f"), c("a", "e", "i", "o", "u")) # 1 3 NA` <br>
+Return indices of those elements of a logical vector that have the value `TRUE`<br>
+&emsp;`which(c(TRUE, FALSE, FALSE, TRUE)) # 1 4` <br>
+Return a vector containing `TRUE` if element of first vector is present in second vector, and `FALSE` otherwise <br>
+&emsp;`c("a", "i", "f") %in% c("a", "e", "i", "o", "u") # TRUE TRUE FALSE` <br>
+
 
 
 ## Dataset tools
