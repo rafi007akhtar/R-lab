@@ -2,7 +2,21 @@
 
 This repository goes through basics of R, exploring the key strengths of the language, while analyzing several datasets.
 
-## Command-line tools
+## Table of Contents
+<ol>
+    <li> <a href="#command-line-tools"> Command-line Tools </a> </li>
+    <li> <a href="#r-basics"> R-basics </a> </li>
+        <ul type="square">
+            <li>Objects, Vectors and Classes</li>
+            <li>Flow of Control</li>
+            <li>Sort, Order and Rank</li>
+        </ul>
+    <li> <a href="#dataset-tools"> Dataset tools </a> </li>
+    <li> <a href="#graph-functions"> Graph functions </a> </li>
+    <li> <a href="#data-wrangling-tools"> Data Wrangling tools </a> </li>
+</ol>
+
+## Command-line Tools
 Run R-script from the console <br>
 &emsp;`Rscript filename.r` <br>
 Open R shell in the console <br> 
