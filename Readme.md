@@ -34,14 +34,14 @@ Return `TRUE` if two objects are identical; `FALSE` otherwise <br>
 Create a vector or sequence or array with 3 entries (replace entries with values or variables; extendible to less or more number of entries)<br>
 &emsp;`vec = c(entry1, entry2, entry3)` <br>
 Create a vector with integers from n to m <br>
-&emsp; `n:m # one way do to it` <br>
-&emsp; `seq(n,m) # another way do to it` <br>
-&emsp; `seq(n,m,jump) # increment elements by a factor of jump` <br>
-&emsp; `seq(n,m,length.out=l) # evenly spread out elements between n and m containing l elements incrementing by the same amount` <br>
+&emsp;`n:m # one way do to it` <br>
+&emsp;`seq(n,m) # another way do to it` <br>
+&emsp;`seq(n,m,jump) # increment elements by a factor of jump` <br>
+&emsp;`seq(n,m,length.out=l) # evenly spread out elements between n and m containing l elements incrementing by the same amount` <br>
 Access elements of a vector <br>
-&emsp; `vec[n] # access element number n` <br>
-&emsp; `vec[c(n,m)] # access elements number n and m; extensible to more number of elements; can be accessed using other multi-vector indices mentioned above` <br>
-&emsp; `vec["name"] # access value of a table with name specified` <br>
+&emsp;`vec[n] # access element number n` <br>
+&emsp;`vec[c(n,m)] # access elements number n and m; extensible to more number of elements; can be accessed using other multi-vector indices mentioned above` <br>
+&emsp;`vec["name"] # access value of a table with name specified` <br>
 Return a table with frequency of each entry in a vector <br>
 &emsp;`table(seq)` <br>
 Return the index of the lexical minimum of a vector <br>
@@ -61,6 +61,26 @@ Logical operations on numbers and vectors <br>
 &emsp;`num1 == num2 # TRUE if num1 = num2; FALSE otherwise` <br>
 &emsp;`vector1 < n # returns a vector with value TRUE for those elements of vector1 < n and FLASE everywhere else` <br>
 Other logical operations: `<=, >, >=, !=, !` <br>
+
+### Flow of Control
+Conditionals <br>
+&emsp;`if (condition) {` <br>
+&emsp;&emsp;`# statements` <br>
+&emsp;`} else {` <br>
+&emsp;&emsp;`# alternate statements` <br>
+&emsp;`}` <br>
+Conditional functions <br>
+&emsp;`ifelse(condition, if-true-statement, if-false-statement) # works on vectors as well` <br>
+&emsp;`any(logical_vector) # returns TRUE if any element of logical_vector is TRUE; returns FALSE otherwise` <br>
+&emsp;`all(logical_vector) # returns TRUE if all elements of logical_vector are TRUE; returns FALSE otherwise` <br>
+Function defining <br>
+&emsp;`funcName = function(parameters) {` <br>
+&emsp;&emsp;`# statements` <br>
+&emsp;`}` <br>
+For loop <br>
+&emsp;`for (var in vector) {` <br>
+&emsp;&emsp;`# statements` <br>
+&emsp;`}` <br>
 
 
 

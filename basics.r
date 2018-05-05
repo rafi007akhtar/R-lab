@@ -125,3 +125,40 @@ vec = c(TRUE, FALSE, FALSE, TRUE, FALSE, FALSE)
 c(which(vec), "of vec are true") # return the indices in vec where it is TRUE (1,4)
 # other logical operations: <=, >, >=, ==, !=
 
+print("---------") # endling line
+
+
+
+# NINE: Conditionals
+m = 0
+if (m == 0) {
+    print("NA")
+} else { 
+    paste("1 /", m, "=", 1/m) 
+}
+
+m = 3
+paste("1 /", m, "=", ifelse(m == 0, NA, 1/m))
+
+# Remove all NA's from na_example using ifelse(cond, if-true, if-false) function
+no_nas = ifelse(is.na(na_example), 0, na_example)
+paste(sum(is.na(no_nas)), "number of NAs in the example")
+
+# Write a function for the above scenario
+reciprocal = function(vec) {
+    # Return the reciprocal of vector vec
+    # vec can be single-valued or muti-valued vector
+    ifelse(vec == 0, NA, 1/vec)
+}
+test_case = -3:3
+paste("1 /", test_case, "=", reciprocal(test_case))
+
+# Print 1+2+...+n for n ranging from 1 to 10 using for loop
+for (i in 1:10) {
+    n = 1:i
+    print(c("Sum uptil", i, "=", sum(n)))
+}
+
+print("---------") # endling line
+
+
