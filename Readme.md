@@ -122,7 +122,7 @@ To illustrate these concepts, consider the following example.
 **Note.** Indexing in R begins from 1.
 
 
-## Indexing tools
+### Indexing tools
 Return indices of elements of first vector present in the second vector <br>
 &emsp;`match(c("a", "i", "f"), c("a", "e", "i", "o", "u")) # 1 3 NA` <br>
 Return indices of those elements of a logical vector that have the value `TRUE`<br>
@@ -136,36 +136,41 @@ Return a vector containing `TRUE` if element of first vector is present in secon
 Display all datasets available <br>
 &emsp;`data()` <br>
 Load a dataset <br>
-&emsp;`data(DatasetName)` <br>
+&emsp;`data(dataset_name)` <br>
 Return structure of a data-frame <br>
-&emsp;`str(DatasetName)` <br>
+&emsp;`str(dataset_name)` <br>
 Return the column names of a data-frame <br>
-&emsp;`names(DatasetName)` <br>
+&emsp;`names(dataset_name)` <br>
 View the first 6 entries of a data-frame <br>
-&emsp;`head(DatasetName)` <br>
+&emsp;`head(dataset_name)` <br>
 View the last 6 entries of a data-frame <br>
-&emsp;`tail(DatasetName)` <br>
+&emsp;`tail(dataset_name)` <br>
 Access a column from a data-frame (1) <br>
-&emsp;`DatasetName$column_name` <br>
+&emsp;`dataset_name$column_name` <br>
 Access a column from a data-frame (2) <br>
-&emsp;`DatasetName[["column_name"]]` <br>
+&emsp;`dataset_name[["column_name"]]` <br>
 Return a new data-frame (table) with columns `col1`, `col2`, `col3` (extendible to more or less columns) <br>
 &emsp; `data.frame (col_name_1=col1, col_name_2=col2, col_name_3=col3)` <br>
 Retrieve indices from a dataset containing NA's; returns a list with TRUE for positions having an NA and false otherwise <br>
-&emsp;`is.na(dataset_name)`
+&emsp;`is.na(dataset_name)`  <br>
+Return number of rows in a dataset (excluding the header) <br>
+&emsp;`nrows(dataset_name)`
+
 
 ## Data Wrangling tools
 It involves the use of **dplyr** package.
 ### Setting up `dplyr` onto your system
 Open up R console, and enter: <br>
-`packages.install("dplyr")` <br>
-Now in your R script file, load `dplyr` onto your script
-`library(dplyr)` <br>
+&emsp;`packages.install("dplyr")` <br>
+Now in your R script file, load `dplyr` onto your script <br>
+&emsp;`library(dplyr)` <br>
 ### Using `dplyr` tools
 Return a new table with added column <br>
-`mutate(tableName, newColumnName = newColumn)` <br>
+&emsp;`mutate(tableName, newColumnName = newColumn)` <br>
 Return a subtable containing columns `col1`, `col2`, `col3` from table `tab` (extendable to more / less columns) <br>
-`select(tab, col1, col2, col3)` <br>
+&emsp;`select(tab, col1, col2, col3)` <br>
 Return those tuples from a table whose certain attribute satisfies a certain certain condition <br>
-`filter(tableName, condition)`
+&emsp;`filter(tableName, condition)` <br>
+Use of **pipe** operator (`%>%`): feed in the result of one data-wrangle operation as an input to another data-wrangle operation <br>
+&emsp;`shapes %>% filter(type='quad') %>% select(len, breadth) # choose those rows from the shapes dataset that are quadilaterals, and select the len and breath columns from them`
 
