@@ -59,4 +59,18 @@ ind = reqd_states %in% states
 paste("Present for", reqd_states[ind])
 paste("Absent for", reqd_states[!ind])
 
+# Data-wrangling -- will need dplyr package for that
+library(dplyr) # NOTE: Be sure to install this package via install.packages("dplyr") from the console
 
+# Add the murder_rate column to the murders dataset using dplyr's mutate
+murders = mutate(murders, rate = murder_rate)
+
+# Select those tuples from the new murders dataset that have a murder rate less than or equal to 0.75, using dplyr's filter
+filter(murders, rate <= 0.75)
+
+# Make a new table from murders dataset with state, population and rate columns, using dplyr's select
+new_table = select(murders, state, population, rate)
+head(new_table)
+
+# From the murders dataset, select state, population and total, and print the tuples with rate <= 0.71, in one line 
+murders %>% select(state, population, rate) %>% filter(rate <= 0.71)

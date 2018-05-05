@@ -122,7 +122,7 @@ To illustrate these concepts, consider the following example.
 **Note.** Indexing in R begins from 1.
 
 
-## Data Wrangling tools
+## Indexing tools
 Return indices of elements of first vector present in the second vector <br>
 &emsp;`match(c("a", "i", "f"), c("a", "e", "i", "o", "u")) # 1 3 NA` <br>
 Return indices of those elements of a logical vector that have the value `TRUE`<br>
@@ -153,3 +153,19 @@ Return a new data-frame (table) with columns `col1`, `col2`, `col3` (extendible 
 &emsp; `data.frame (col_name_1=col1, col_name_2=col2, col_name_3=col3)` <br>
 Retrieve indices from a dataset containing NA's; returns a list with TRUE for positions having an NA and false otherwise <br>
 &emsp;`is.na(dataset_name)`
+
+## Data Wrangling tools
+It involves the use of **dplyr** package.
+### Setting up `dplyr` onto your system
+Open up R console, and enter: <br>
+`packages.install("dplyr")` <br>
+Now in your R script file, load `dplyr` onto your script
+`library(dplyr)` <br>
+### Using `dplyr` tools
+Return a new table with added column <br>
+`mutate(tableName, newColumnName = newColumn)` <br>
+Return a subtable containing columns `col1`, `col2`, `col3` from table `tab` (extendable to more / less columns) <br>
+`select(tab, col1, col2, col3)` <br>
+Return those tuples from a table whose certain attribute satisfies a certain certain condition <br>
+`filter(tableName, condition)`
+
