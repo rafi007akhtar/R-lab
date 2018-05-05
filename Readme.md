@@ -156,6 +156,14 @@ Retrieve indices from a dataset containing NA's; returns a list with TRUE for po
 Return number of rows in a dataset (excluding the header) <br>
 &emsp;`nrows(dataset_name)`
 
+## Graph functions
+Draw a scatter-plot between two quantities <br>
+&emsp;`plot (x-quantity, y-quantity)` <br>
+Plot a histogram showing frequencies a quantity<br>
+&emsp;`hist (quantity)` <br>
+Plot a boxplot showing for the regions in the dataset and their murder rates <br>
+&emsp;`boxplot (rate~region, data = murders)` <br>
+
 
 ## Data Wrangling tools
 It involves the use of **dplyr** package.

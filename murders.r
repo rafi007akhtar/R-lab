@@ -74,3 +74,13 @@ head(new_table)
 
 # From the murders dataset, select state, population and total, and print the tuples with rate <= 0.71, in one line 
 murders %>% select(state, population, rate) %>% filter(rate <= 0.71)
+
+
+# Graphs
+# Plot a graph between the population and their murder rates
+plot (murders$total, murders$population)
+# Plot a histogram showing frequencies of different populations
+hist (pops)
+# Plot a boxplot showing for the regions in the dataset and their murder rates
+boxplot (rate~region, data = murders)
+
